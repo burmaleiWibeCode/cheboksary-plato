@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Plato — кофейня на Московском проспекте, Чебоксары</title>
+<meta name="description" content="Кофейня Plato в Чебоксарах: кофе, десерты ручной работы, салаты и картины местных художников на стенах. Московский просп., 38, корп. 4. Ежедневно с 08:00.">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Manrope:wght@300;400;500;600&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      colors: { paper:'#F6F1E8', ink:'#1B1815', clay:'#C2603F', olive:'#77855F', sand:'#E7DCCB', muted:'#8A7F6F' },
+      fontFamily: { display:['"Cormorant Garamond"','Georgia','serif'], sans:['Manrope','system-ui','sans-serif'] }
+    }
+  }
+}
+</script>
+<style>
+  html { scroll-behavior: smooth; }
+  body { background: #F6F1E8; color: #1B1815; -webkit-font-smoothing: antialiased; }
+  .leaders { display:flex; align-items:baseline; gap:.5rem; }
+  .leaders .dots { flex:1; border-bottom:1px dotted rgba(27,24,21,.35); transform: translateY(-3px); }
+  .grain::before {
+    content:""; position:fixed; inset:0; pointer-events:none; opacity:.05; z-index:50;
+    background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  }
+  .chip { transition: all .18s ease; }
+  .chip[aria-pressed="true"] { background:#C2603F; color:#F6F1E8; border-color:#C2603F; }
+  .photo { filter: saturate(.92) contrast(1.02); }
+  .underline-link { background-image:linear-gradient(currentColor,currentColor); background-size:100% 1px; background-repeat:no-repeat; background-position:0 100%; }
+  @media (prefers-reduced-motion: no-preference) {
+    .rise { animation: rise .9s cubic-bezier(.2,.7,.2,1) both; }
+    .rise-2 { animation: rise .9s .12s cubic-bezier(.2,.7,.2,1) both; }
+    @keyframes rise { from { opacity:0; transform: translateY(18px); } to { opacity:1; transform:none; } }
+  }
+</style>
+</head>
+<body class="font-sans grain">
+
+<header class="sticky top-0 z-40 border-b border-ink/10 bg-paper/85 backdrop-blur-md">
+  <div class="mx-auto flex max-w-6xl items-center justify-between px-5 py-4">
+    <a href="#top" class="font-display text-2xl tracking-[.22em]">PLATO</a>
+    <nav class="hidden gap-7 text-[13px] uppercase tracking-[.16em] text-ink/70 md:flex">
+      <a href="#about" class="hover:text-clay">О месте</a>
+      <a href="#menu" class="hover:text-clay">Меню</a>
+      <a href="#order" class="hover:text-clay">Заказ</a>
+      <a href="#contacts" class="hover:text-clay">Контакты</a>
+    </nav>
+    <a href="tel:+79656810888" class="rounded-full border border-ink/25 px-4 py-2 text-[12px] uppercase tracking-[.14em] hover:border-clay hover:text-clay">+7 965 681-08-88</a>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="mx-auto grid max-w-6xl gap-10 px-5 pt-10 pb-16 md:grid-cols-[1.05fr_.95fr] md:items-end md:gap-14 md:pt-16">
+    <div class="rise">
+      <p class="mb-5 flex items-center gap-3 text-[11px] uppercase tracking-[.28em] text-muted">
+        <span class="inline-block h-px w-8 bg-clay"></span> Кофейня · Чебоксары · 4,8 ★
+      </p>
+      <h1 class="font-display text-[42px] leading-[1.02] tracking-tight sm:text-6xl md:text-[68px]">
+        Кофе, десерты<br>
+        и картины,<br>
+        <span class="italic text-clay">написанные вручную</span>
+      </h1>
+      <p class="mt-6 max-w-md text-[15px] leading-relaxed text-ink/75">
+        Небольшая кофейня на Московском проспекте, где стены украшают работы местных художников,
+        а витрина каждое утро собирается заново. Заходите на капучино по пути — или оставайтесь
+        на салат и кусок «Праги».
+      </p>
+      <div class="mt-8 flex flex-wrap items-center gap-3">
+        <a href="#order" class="rounded-full bg-ink px-6 py-3 text-[13px] uppercase tracking-[.14em] text-paper transition hover:bg-clay">Собрать заказ</a>
+        <a href="https://vk.ru/platocoffeeandtea" target="_blank" rel="noopener" class="rounded-full border border-ink/25 px-6 py-3 text-[13px] uppercase tracking-[.14em] transition hover:border-clay hover:text-clay">Написать в ВК</a>
+      </div>
+      <p class="mt-6 text-[13px] text-muted">Пн–Пт 08:00–20:00 · Сб–Вс 09:00–20:00</p>
+    </div>
+
+    <figure class="rise-2 relative">
+      <img src="https://avatars.mds.yandex.net/get-altay/1778671/2a000001865570792781e2bdc312235a9026/XXXL"
+           alt="Интерьер кофейни Plato в Чебоксарах" class="photo aspect-[4/5] w-full rounded-[2px] object-cover">
+      <figcaption class="mt-3 flex items-center justify-between text-[11px] uppercase tracking-[.18em] text-muted">
+        <span>Зал и стены с картинами</span><span>01</span>
+      </figcaption>
+      <div class="pointer-events-none absolute -left-3 top-6 hidden rotate-[-90deg] text-[10px] uppercase tracking-[.3em] text-ink/40 md:block">Московский просп., 38/4</div>
+    </figure>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="border-y border-ink/10 bg-sand/40">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3 md:gap-8">
+      <div>
+        <p class="text-[11px] uppercase tracking-[.28em] text-clay">01 — Атмосфера</p>
+        <h2 class="mt-3 font-display text-3xl leading-tight">Тише, чем в&nbsp;центре.<br>Светлее, чем дома.</h2>
+      </div>
+      <p class="text-[15px] leading-relaxed text-ink/75 md:col-span-1">
+        Днём здесь работают за ноутбуками, утром берут кофе с собой, вечером разговаривают
+        за большим столом у окна. Картины на стенах — не декор из коробки: их пишут
+        и приносят сюда художники, а кофейня меняет экспозицию.
+      </p>
+      <ul class="space-y-4 text-[14px] text-ink/80">
+        <li class="flex gap-3"><span class="font-display text-clay">→</span> Свежая витрина каждый день</li>
+        <li class="flex gap-3"><span class="font-display text-clay">→</span> Завтраки и салаты, а не только сладкое</li>
+        <li class="flex gap-3"><span class="font-display text-clay">→</span> Кофе с собой за 3 минуты</li>
+        <li class="flex gap-3"><span class="font-display text-clay">→</span> Wi-Fi и розетки у всех столов</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- MENU -->
+  <section id="menu" class="mx-auto max-w-6xl px-5 py-16">
+    <div class="mb-10 flex flex-wrap items-end justify-between gap-4">
+      <div>
+        <p class="text-[11px] uppercase tracking-[.28em] text-clay">02 — Меню</p>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl">Что стоит попробовать</h2>
+      </div>
+      <p class="max-w-xs text-[13px] leading-relaxed text-muted">Цены из открытого меню кофейни. Состав и наличие уточняйте у бариста — витрина меняется.</p>
+    </div>
+
+    <div class="grid gap-x-14 gap-y-10 md:grid-cols-2">
+      <div>
+        <h3 class="mb-4 font-display text-2xl italic text-clay">Кофе</h3>
+        <ul class="space-y-3 text-[15px]">
+          <li class="leaders"><span>Капучино</span><span class="dots"></span><span class="whitespace-nowrap">220–370 ₽</span></li>
+          <li class="leaders"><span>Латте</span><span class="dots"></span><span class="whitespace-nowrap">от 240 ₽</span></li>
+          <li class="leaders"><span>Фильтр-кофе</span><span class="dots"></span><span class="whitespace-nowrap">от 180 ₽</span></li>
+        </ul>
+        <p class="mt-4 text-[12px] text-muted">Капучино — 220 ₽ / 280 ₽ / 370 ₽ в зависимости от объёма.</p>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-display text-2xl italic text-clay">Десерты</h3>
+        <ul class="space-y-3 text-[15px]">
+          <li class="leaders"><span>Морковный торт</span><span class="dots"></span><span>280 ₽</span></li>
+          <li class="leaders"><span>Торт «Прага»</span><span class="dots"></span><span>280 ₽</span></li>
+          <li class="leaders"><span>Тирамису</span><span class="dots"></span><span>280 ₽</span></li>
+          <li class="leaders"><span>Баноффи</span><span class="dots"></span><span>280 ₽</span></li>
+          <li class="leaders"><span>Чизкейк Баскский</span><span class="dots"></span><span>280 ₽</span></li>
+          <li class="leaders"><span>Чизкейк манго-маракуйя</span><span class="dots"></span><span>280 ₽</span></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-display text-2xl italic text-clay">Сезонные напитки</h3>
+        <ul class="space-y-3 text-[15px]">
+          <li class="leaders"><span>Глинтвейн с вяленой грушей</span><span class="dots"></span><span>340 ₽</span></li>
+          <li class="leaders"><span>Облепиховый пунш</span><span class="dots"></span><span>340 ₽</span></li>
+          <li class="leaders"><span>Ягодный грог</span><span class="dots"></span><span>340 ₽</span></li>
+        </ul>
+        <p class="mt-4 text-[12px] text-muted">Объём 350 мл.</p>
+      </div>
+
+      <div>
+        <h3 class="mb-4 font-display text-2xl italic text-clay">Салаты</h3>
+        <ul class="space-y-3 text-[15px]">
+          <li class="leaders"><span>Цезарь с курицей</span><span class="dots"></span><span>430 ₽</span></li>
+          <li class="leaders"><span>С креветками и авокадо</span><span class="dots"></span><span>430 ₽</span></li>
+          <li class="leaders"><span>Греческий</span><span class="dots"></span><span>430 ₽</span></li>
+        </ul>
+        <p class="mt-4 text-[12px] text-muted">Порция 250 г.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ORDER CONSTRUCTOR -->
+  <section id="order" class="border-y border-ink/10 bg-ink text-paper">
+    <div class="mx-auto max-w-6xl px-5 py-16">
+      <div class="mb-10 max-w-xl">
+        <p class="text-[11px] uppercase tracking-[.28em] text-clay">03 — Конструктор</p>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl">Соберите свой заказ</h2>
+        <p class="mt-4 text-[14px] leading-relaxed text-paper/70">Отметьте, что хочется, — посчитаем сумму и подскажем, с чем прийти. Заказ подтвердит бариста.</p>
+      </div>
+
+      <div class="grid gap-10 md:grid-cols-[1.3fr_.7fr]">
+        <div class="space-y-8">
+          <fieldset>
+            <legend class="mb-3 text-[11px] uppercase tracking-[.24em] text-paper/50">Напиток</legend>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="220" aria-pressed="false">Капучино 220 ₽</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="280" aria-pressed="false">Капучино 280 ₽</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="370" aria-pressed="false">Капучино 370 ₽</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="340" aria-pressed="false">Пунш 340 ₽</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="mb-3 text-[11px] uppercase tracking-[.24em] text-paper/50">Десерт</legend>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="280" aria-pressed="false">Морковный торт</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="280" aria-pressed="false">Прага</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="280" aria-pressed="false">Тирамису</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="280" aria-pressed="false">Чизкейк</button>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend class="mb-3 text-[11px] uppercase tracking-[.24em] text-paper/50">Если хочется плотнее</legend>
+            <div class="flex flex-wrap gap-2">
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="430" aria-pressed="false">Салат Цезарь</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="430" aria-pressed="false">С креветками</button>
+              <button type="button" class="chip rounded-full border border-paper/25 px-4 py-2 text-[13px]" data-price="430" aria-pressed="false">Греческий</button>
+            </div>
+          </fieldset>
+        </div>
+
+        <aside class="h-fit rounded-[2px] border border-paper/15 p-6">
+          <p class="text-[11px] uppercase tracking-[.24em] text-paper/50">Ваш заказ</p>
+          <ul id="orderList" class="mt-4 space-y-2 text-[14px] text-paper/80"></ul>
+          <div class="mt-5 flex items-baseline justify-between border-t border-paper/15 pt-4">
+            <span class="text-[12px] uppercase tracking-[.2em] text-paper/50">Итого</span>
+            <span id="orderTotal" class="font-display text-4xl">0 ₽</span>
+          </div>
+          <a id="orderLink" href="https://wa.me/79656810888" target="_blank" rel="noopener"
+             class="mt-5 block rounded-full bg-clay px-5 py-3 text-center text-[13px] uppercase tracking-[.14em] text-paper transition hover:bg-paper hover:text-ink">Отправить в WhatsApp</a>
+          <p class="mt-3 text-center text-[11px] leading-relaxed text-paper/45">Кнопка откроет чат с кофейней и подставит ваш набор.</p>
+        </aside>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="mx-auto max-w-6xl px-5 py-16">
+    <div class="mb-8 flex items-end justify-between">
+      <div>
+        <p class="text-[11px] uppercase tracking-[.28em] text-clay">04 — Фото</p>
+        <h2 class="mt-3 font-display text-4xl md:text-5xl">Как это выглядит</h2>
+      </div>
+      <a href="https://yandex.ru/maps/org/plato/177859505819/gallery/" target="_blank" rel="noopener" class="hidden text-[12px] uppercase tracking-[.16em] underline-link text-ink/60 md:inline">Все фото на картах</a>
+    </div>
+    <div class="grid grid-cols-2 gap-3 md:grid-cols-4">
+      <img src="https://avatars.mds.yandex.net/get-altay/1031166/2a00000186ac487a01a40e50708d0c54e4a3/XXXL" alt="Кофейня Plato, зал" loading="lazy" class="photo aspect-square w-full rounded-[2px] object-cover">
+      <img src="https://avatars.mds.yandex.net/get-altay/1027861/2a00000186ac4801ff1ff770567c1bfd2229/XXXL" alt="Кофейня Plato, детали интерьера" loading="lazy" class="photo aspect-square w-full rounded-[2px] object-cover">
+      <img src="https://sun9-6.vkuserphoto.ru/s/v1/ig2/CCu6igrD0a_0UXpqgQd_08jwNLlwMJdb437WKSAqLQWNPJg1R_2sjV60I7axmg43uj8nAZh0bEJcN_LIQOoDOpJ1.jpg?quality=96&size=811x1440" alt="Plato, витрина" loading="lazy" class="photo aspect-square w-full rounded-[2px] object-cover">
+      <img src="https://avatars.mds.yandex.net/get-altay/1778671/2a000001865570792781e2bdc312235a9026/XXXL" alt="Plato, стены с картинами" loading="lazy" class="photo aspect-square w-full rounded-[2px] object-cover">
+    </div>
+  </section>
+
+  <!-- CONTACTS -->
+  <section id="contacts" class="border-t border-ink/10 bg-sand/40">
+    <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 md:grid-cols-3">
+      <div>
+        <p class="text-[11px] uppercase tracking-[.28em] text-clay">05 — Контакты</p>
+        <h2 class="mt-3 font-display text-4xl">Заходите</h2>
+        <p class="mt-4 text-[14px] leading-relaxed text-ink/75">Московский просп., 38, корп. 4, 1 этаж<br>Чебоксары</p>
+        <a href="https://yandex.ru/maps/org/plato/177859505819/" target="_blank" rel="noopener" class="mt-3 inline-block text-[13px] underline-link text-clay">Построить маршрут</a>
+      </div>
+      <div>
+        <p class="text-[11px] uppercase tracking-[.24em] text-muted">Часы</p>
+        <table class="mt-3 w-full max-w-[220px] text-[14px]">
+          <tr><td class="py-1 text-ink/70">Пн–Пт</td><td class="py-1 text-right">08:00–20:00</td></tr>
+          <tr><td class="py-1 text-ink/70">Сб–Вс</td><td class="py-1 text-right">09:00–20:00</td></tr>
+        </table>
+        <p class="mt-3 text-[13px] text-muted">Без выходных</p>
+      </div>
+      <div>
+        <p class="text-[11px] uppercase tracking-[.24em] text-muted">Связаться</p>
+        <a href="tel:+79656810888" class="mt-3 block font-display text-2xl hover:text-clay">+7 965 681-08-88</a>
+        <div class="mt-4 flex flex-wrap gap-2">
+          <a href="https://vk.ru/platocoffeeandtea" target="_blank" rel="noopener" class="rounded-full border border-ink/25 px-4 py-2 text-[12px] uppercase tracking-[.12em] hover:border-clay hover:text-clay">ВКонтакте</a>
+          <a href="https://wa.me/79656810888" target="_blank" rel="noopener" class="rounded-full border border-ink/25 px-4 py-2 text-[12px] uppercase tracking-[.12em] hover:border-clay hover:text-clay">WhatsApp</a>
+          <a href="https://t.me/89656810888" target="_blank" rel="noopener" class="rounded-full border border-ink/25 px-4 py-2 text-[12px] uppercase tracking-[.12em] hover:border-clay hover:text-clay">Telegram</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="bg-paper">
+  <div class="mx-auto flex max-w-6xl flex-col gap-2 px-5 py-8 text-[11px] uppercase tracking-[.18em] text-muted md:flex-row md:items-center md:justify-between">
+    <span>Plato · Чебоксары · 4,8 ★ на Яндекс Картах</span>
+    <span>Демо-концепт сайта · подготовлено для кофейни Plato</span>
+  </div>
+</footer>
+
+<script>
+  const chips = Array.from(document.querySelectorAll('.chip'));
+  const listEl = document.getElementById('orderList');
+  const totalEl = document.getElementById('orderTotal');
+  const linkEl = document.getElementById('orderLink');
+
+  function render() {
+    const picked = chips.filter(c => c.getAttribute('aria-pressed') === 'true');
+    const total = picked.reduce((s, c) => s + Number(c.dataset.price), 0);
+    listEl.innerHTML = picked.length
+      ? picked.map(c => `<li class="leaders"><span>${c.textContent.replace(/\s*\d+\s*₽$/, '')}</span><span class="dots"></span><span>${c.dataset.price} ₽</span></li>`).join('')
+      : '<li class="text-paper/40">Пока пусто — выберите напиток и десерт.</li>';
+    totalEl.textContent = total + ' ₽';
+    const text = picked.length
+      ? 'Здравствуйте! Хочу заказать: ' + picked.map(c => c.textContent.replace(/\s*\d+\s*₽$/, '') + ' (' + c.dataset.price + ' ₽)').join(', ') + '. Итого ' + total + ' ₽.'
+      : 'Здравствуйте! Хочу уточнить меню кофейни Plato.';
+    linkEl.href = 'https://wa.me/79656810888?text=' + encodeURIComponent(text);
+  }
+
+  chips.forEach(chip => chip.addEventListener('click', () => {
+    chip.setAttribute('aria-pressed', chip.getAttribute('aria-pressed') === 'true' ? 'false' : 'true');
+    render();
+  }));
+  render();
+</script>
+</body>
+</html>
